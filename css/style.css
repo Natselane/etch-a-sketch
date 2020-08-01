@@ -1,0 +1,21 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 500px;
+  display: -ms-grid;
+  display: grid;
+}
+
+.red {
+  background-color: red !important;
+}
+
+.container div {
+  background-color: pink;
+}
+/*# sourceMappingURL=style.css.map */
