@@ -52,6 +52,12 @@ main header {
 
 button:focus {
   outline: none;
+  background-color: #47320b;
+}
+
+.blackBtn:focus, .random-colorBtn:focus {
+  background-color: white;
+  color: #47320b;
 }
 
 .container {

@@ -1,9 +1,10 @@
 const container = document.querySelector(".container");
 const resetBtn = document.querySelector(".resetBtn");
 const resizeBtn = document.querySelector(".resizeBtn");
-const randomBtn = document.querySelector(".random-colorsBtn");
-let squareDivs; 
+const randomBtn = document.querySelector(".random-colorBtn");
+const blackBtn = document.querySelector(".blackBtn");
 
+let squareDivs; 
 let amountOfSquares = 16;
 let color = "black";
 
@@ -26,6 +27,11 @@ randomBtn.addEventListener("click", () => {
     paintSquares(color);
 })
 
+blackBtn.addEventListener("click", () => {
+    color = "black";
+    paintSquares(color);
+})
+
 function createGrid(amountOfSquares) {
     for (let i = 0; i < amountOfSquares * amountOfSquares; i++) {
         let squareDiv = document.createElement("div");
@@ -44,6 +50,7 @@ function paintSquares(color) {
     if (color == "black") {
         squareDivs.forEach(square => {
             square.addEventListener("pointerover", () => {
+                square.style.backgroundColor = "";
                 square.classList.add("black");
             })
         }) 
