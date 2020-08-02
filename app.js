@@ -16,7 +16,7 @@ resetBtn.addEventListener("click", () => resetGrid());
 resizeBtn.addEventListener("click", () => {
     resetGrid();
     amountOfSquares = window.prompt("How many squares do you want? (Min 10, max 80)");
-    while (amountOfSquares < 10 || amountOfSquares > 80) {
+    while (!(amountOfSquares > 10) || !(amountOfSquares < 80)) {
         amountOfSquares = window.prompt("You can have minimum 10 and maximum 80 squares");
     }
     createGrid(amountOfSquares);
